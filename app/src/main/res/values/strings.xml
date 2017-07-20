@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Homestore</string>
+    <string name="snack_no_internet_title">No internet connection!</string>
 </resources>
