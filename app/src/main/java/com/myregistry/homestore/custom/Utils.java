@@ -14,11 +14,11 @@ public class Utils {
     }
 
     public static String getPrice(String html){
-        return Jsoup.parse(html).select("strike").first().data();
+        return Jsoup.parse(html).select("strike").text();
     }
 
     public static String getDescription(String html){
-        return Jsoup.parse(html).select("span.riRssContributor").first().data();
+        return Jsoup.parse(html).select("span.riRssContributor").text() ;
     }
 
 }

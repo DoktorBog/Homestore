@@ -58,7 +58,9 @@ public class ProductPresenter implements Presenter<ProductView> {
                                 product.setTitle(item.getTitle());
                                 product.setImageUrl(Utils.getImageUrl(item.getDescription()));
                                 product.setDescription(Utils.getDescription(item.getDescription()));
-                                product.setPrice(Utils.getPrice(item.getDescription()));
+                                product.setPrice(Utils.getPrice(item.getDescription()) + "");
+                                if(product.getPrice().isEmpty())
+                                    product.setPrice("$10");
                                 realm.copyToRealmOrUpdate(product);
                             }
                         });

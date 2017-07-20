@@ -20,19 +20,14 @@
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
                 android:layout_margin="10dp" />
 
             <com.myregistry.homestore.custom.ProximaNovaTextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/image"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="15dp"
                 android:textColor="#37474f"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -40,7 +35,10 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:text="Title"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_alignTop="@+id/image"
+                android:layout_toRightOf="@+id/image"
+                android:layout_toEndOf="@+id/image" />
 
             <com.myregistry.homestore.custom.ProximaNovaTextView
                 android:id="@+id/price"
@@ -48,12 +46,24 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
                 android:textColor="#3f51b5"
-                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="10$"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_toRightOf="@+id/image"
+                android:layout_toEndOf="@+id/image" />
+
+            <com.gc.materialdesign.views.ButtonFlat
+                android:id="@+id/delate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#1E88E5"
+                android:text="DELETE FROM CARD"
+                android:layout_below="@+id/price"
+                android:layout_toRightOf="@+id/image"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
 

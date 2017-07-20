@@ -25,6 +25,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchNewActivity(Class<?> classL, Bundle bundle, int code){
+        Intent intent = new Intent(this, classL);
+        if(bundle!=null) intent.putExtra(BUNDLE_NAME, bundle);
+        startActivityForResult(intent, code);
+    }
+
     public Bundle getBundle(){
         return getIntent().getBundleExtra(BUNDLE_NAME);
     }
